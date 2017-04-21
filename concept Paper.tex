@@ -12,6 +12,18 @@
 
 \subsection{Problem statement}{It is quite hard to import Tarjan’s algorithm in a parallel manner since according to its implementations; it uses a depth first search(DFS) which doesn’t explore already explored nodes. The strongly connected components then form subtrees of the search tree. The nodes are placed on a stack as they are visited. When the search returns from the subtree, the nodes are popped off the stack and checked to see if they are a root of a strongly connected component. If the node is a root, then it and all the nodes taken off before it form the strongly connected component.}
 
+\subsection{Aim and Objective}
+\subsubsection{General Objective }{The major goal is to provide algorithms that process concurrently for finding strongly connected components \cite{ref1} with less time consumption and this can be done by parallelizing the algorithm}
+\subsubsection{Specific Objectives}
+\begin{itemize}
+
+\item	To find the strongly connected components (SCCs) of a graph (the maximal subsets S of the graph’s nodes such that for any pair of nodes there is a path from one node to another).
+
+\item To find which nodes are part of a cycle in the graph (such that there is a non-empty path from the node to itself).
+
+\item  To find which nodes are part of a “lasso” (such that there is a path from the node to a node on a cycle).
+\end{itemize}
+
 \subsection{Research scope}{This parallel version of tarjan’s algorithms is presented based on depth-first search, for three problems relevant to model checking: given a state graph, to find its strongly connected components, which states are in loops, and which states are in “lassos”. The algorithm typically exhibits about a four-fold speed-up over the corresponding sequential algorithms on an eight-core machine\cite{ref3}.}
 
 \bibliography{conceptPaper}
